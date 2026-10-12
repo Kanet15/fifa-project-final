@@ -68,9 +68,11 @@
  ├──> คำนวณงบประมาณ (Care Budget Calculator) ──> ประเมินค่าใช้จ่ายแรกเลี้ยงและรายเดือน
  │
  └──> ระบบผู้ดูแล (Admin Dashboard) ──> ตรวจสอบและอนุมัติคำขอรับเลี้ยง
+
 ---
 
-## 5. สถาปัตยกรรมระบบ (Three-Layer Architecture)โปรเจกต์นี้ได้รับการออกแบบตามหลักวิศวกรรมซอฟต์แวร์ด้วย สถาปัตยกรรม 3 ชั้น (Three-Layer Architecture):Presentation Layer (app.py และ UI Components):จัดการหน้าจอผู้ใช้ (UI), การตกแต่งด้วย CSS (โทนสีม่วง), ฟอร์มรับข้อมูล และการแสดงผลโต้ตอบกับผู้ใช้Business Logic Layer (src/services/pet_service.py):ประมวลผลการค้นหา, อัลกอริทึมการกรองข้อมูล, ระบบคำนวณงบประมาณ และการประมวลผลคะแนนแบบทดสอบData Access Layer (src/storage/json_storage.py):จัดการอ่านและบันทึกข้อมูลเข้า-ออกจากไฟล์ JSON อย่างปลอดภัย (data/pets.json, data/applications.json)
+## 5. สถาปัตยกรรมระบบ (Three-Layer Architecture)โปรเจกต์นี้ได้รับการออกแบบตามหลักวิศวกรรมซอฟต์แวร์ด้วย สถาปัตยกรรม 3 ชั้น (Three-Layer Architecture):Presentation Layer (app.py และ UI Components):จัดการหน้าจอผู้ใช้ (UI), การตกแต่งด้วย CSS (โทนสีม่วง), ฟอร์มรับข้อมูล และการแสดงผลโต้ตอบกับผู้ใช้Business Logic Layer
+(src/services/pet_service.py):ประมวลผลการค้นหา, อัลกอริทึมการกรองข้อมูล, ระบบคำนวณงบประมาณ และการประมวลผลคะแนนแบบทดสอบData Access Layer (src/storage/json_storage.py):จัดการอ่านและบันทึกข้อมูลเข้า-ออกจากไฟล์ JSON อย่างปลอดภัย (data/pets.json, data/applications.json)
 
 ## 6. ทีมงานและบทบาทหน้าที่ (Team Roles & Responsibilities)ชื่อสมาชิกบทบาท (Role)หน้าที่ความรับผิดชอบหลักโดนัสPlanner / UI Designerวางแผน Sprint, รวบรวมข้อกำหนดระบบ, ออกแบบ UI/UX, เมนูนำทาง และจัดทำเอกสารโปรเจกต์ภีมDeveloper / Backendวางโครงสร้างแอปพลิเคชัน, จัดการชั้นข้อมูล (Data Layer), พัฒนาระบบค้นหา/กรองข้อมูล และระบบคำนวณหลังบ้านฟ่าFrontend / Debuggerพัฒนาหน้าจอการ์ดสัตว์เลี้ยง, ตรวจสอบและทดสอบระบบ (Testing), จัดการเคสผิดปกติ (Edge Cases) และแก้ไข Bug
 
