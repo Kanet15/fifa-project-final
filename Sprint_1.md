@@ -1,344 +1,80 @@
-# Pet Adoption Explorer — Sprint 1 Report
+# Pet Adoption Explorer — รายงานสรุปผลงาน Sprint 1
 
-## 1. Sprint Overview
-
-**Project:** Pet Adoption Explorer  
-**Course:** CP352301 Script Programming  
-**Sprint:** Sprint 1 — Application Foundation  
-**Project Type:** Web Application
-
----
-
-## 2. Sprint Goal
-
-The goal of Sprint 1 is to establish the foundation of the Pet Adoption Explorer Web Application.
-
-The sprint focuses on creating the initial user interface, navigation, pet exploration, search functionality, input validation, and a modular project structure.
-
-A local sample dataset will be used during Sprint 1. Petfinder API integration will be developed in a later sprint.
+**รหัสวิชา:** CP352301 Script Programming  
+**ชื่อโปรเจกต์:** Pet Adoption Explorer  
+**ระยะโปรเจกต์:** Sprint 1 — Application Foundation (การวางโครงสร้างพื้นฐานแอปพลิเคชัน)  
+**ประเภทโปรเจกต์:** Streamlit Web Application  
+**ลิงก์แอปพลิเคชันออนไลน์ (Live Demo):** `https://<your-app-name>.streamlit.app` *(นำลิงก์ Streamlit Cloud ของคุณมาแปะที่นี่)*  
+**GitHub Repository:** `https://github.com/kulthikaj-cmd/Pet-Adoption-Explorer`  
 
 ---
 
-## 3. Project Objective
+## 1. ภาพรวมและเป้าหมายของ Sprint 1 (Sprint Overview & Goal)
+เป้าหมายหลักของ **Sprint 1** คือการสร้างโครงสร้างพื้นฐานที่มั่นคงและสมบูรณ์สำหรับเว็บแอปพลิเคชัน **Pet Adoption Explorer** โดยมุ่งเน้นการพัฒนารูปแบบหน้าจอผู้ใช้ (User Interface) ที่รองรับทุกอุปกรณ์, ระบบเมนูนำทาง (Sidebar Navigation), ระบบค้นหาและกรองข้อมูลสัตว์เลี้ยง, ระบบตรวจสอบความถูกต้องของข้อมูลนำเข้า (Input Validation), การจัดโครงสร้างโค้ดแบบแยกชั้น (Modular Architecture) รวมถึงการนำระบบขึ้นใช้งานออนไลน์ (Cloud Deployment)
 
-Pet Adoption Explorer is a web application designed to help users discover pets that are available for adoption.
-
-Users will be able to explore pets, search for pets, view pet information, and save pets that they are interested in.
-
-The final application is planned to integrate real pet data through the Petfinder API.
+ใน Sprint 1 นี้ ระบบจะใช้ชุดข้อมูลจำลองภายในรูปแบบ JSON (`data/pets.json`) เป็นหลัก ก่อนที่จะเชื่อมต่อกับ Petfinder API และฐานข้อมูลภายนอกใน Sprint ถัดไป
 
 ---
 
-## 4. Sprint 1 Scope
+## 2. ขอบเขตงานและความสำเร็จ (Project Scope & Achievements)
 
-### 4.1 In Scope
+### 2.1 งานที่อยู่ในขอบเขตและเสร็จสิ้นแล้ว (In Scope - Completed)
+- [x] **โครงสร้างเว็บแอปพลิเคชัน:** พัฒนาด้วยภาษา Python และ Streamlit Framework
+- [x] **หน้าหลัก (Home Dashboard):** ตกแต่งด้วย Hero Banner โทนสีม่วงเรียบหรู พร้อมการ์ดเมนูลัดและส่วน "สัตว์เลี้ยงโดดเด่นประจำวัน (Pet of the Day)"
+- [x] **ระบบเมนูนำทาง (Sidebar Navigation):** สลับหน้าการทำงานได้อย่างลื่นไหลผ่านแถบเมนูด้านข้าง
+- [x] **หน้าค้นหาสัตว์เลี้ยง (Explore Pets):** แสดงการ์ดสัตว์เลี้ยงพร้อมรูปภาพ ชื่อ สายพันธุ์ อายุ เพศ และสถานที่อย่างเป็นระเบียบ
+- [x] **ระบบค้นหาและกรองข้อมูล:** ค้นหาด้วยคีย์เวิร์ดเรียลไทม์ และกรองตามประเภทสัตว์เลี้ยง
+- [x] **การตรวจสอบข้อมูลนำเข้า (Input Validation):** จัดการข้อความด้วย `.strip()`, `.lower()` และระบบป้องกันการค้นหาด้วยค่าว่าง
+- [x] **เครื่องคำนวณงบประมาณ (Care Budget Calculator):** ประเมินค่าใช้จ่ายแรกรับเลี้ยงและค่าใช้จ่ายรายเดือนพร้อมแจกแจงรายละเอียด
+- [x] **เครื่องมือช่วยตัดสินใจ (Pet Match Quiz & Comparison Tool):** แบบทดสอบวิเคราะห์ความเหมาะสมและตารางเปรียบเทียบสัตว์เลี้ยง
+- [x] **ระบบยื่นคำขอรับเลี้ยงและผู้ดูแล (Adoption Application & Admin Management):** ฟอร์มกรอกข้อมูลยื่นคำขอ และหน้าจออนุมัติคำขอสำหรับผู้ดูแลระบบ
+- [x] **สถาปัตยกรรมแบบแยกชั้น (Modular Architecture):** แบ่งโครงสร้างเป็น 3 ชั้น (`Presentation`, `Business Logic`, `Data Access`)
+- [x] **การนำขึ้นระบบออนไลน์ (Cloud Deployment):** เชื่อมต่อ GitHub และนำขึ้นระบบ Streamlit Cloud เปิดใช้งานได้จริงผ่านมือถือและคอมพิวเตอร์
 
-- Web Application foundation
-- Home Dashboard
-- Sidebar Navigation
-- Explore Pets page
-- Pet search
-- Pet cards
-- Basic pet information
-- Basic pet details
-- Favorites interface
-- Local sample pet dataset
-- Input validation
-- Modular project structure
-- Basic error handling
-
-### 4.2 Out of Scope
-
-- Petfinder API integration
-- Real-time pet data
-- User authentication
-- Database
-- Advanced filtering
-- Deployment
-- Advanced recommendation system
-- AI features
+### 2.2 งานที่อยู่นอกขอบเขต (Out of Scope - วางแผนทำใน Sprint 2 / 3)
+- การเชื่อมต่อ Petfinder API เพื่อดึงข้อมูลสัตว์เลี้ยงจริงแบบเรียลไทม์
+- การเชื่อมต่อฐานข้อมูลภายนอกแบบถาวร (SQLite/PostgreSQL)
+- ระบบบัญชีผู้ใช้และการเข้าสู่ระบบตามสิทธิ์ (Authentication & Roles)
+- ระบบแนะนำสัตว์เลี้ยงด้วย AI
 
 ---
 
-## 5. Functional Requirements
+## 3. ความต้องการทางฟังก์ชัน (Functional Requirements)
 
-### FR-01: Application Start
-
-The application must start successfully and display the main application interface.
-
-### FR-02: Home Dashboard
-
-The Home page must display a welcome message and provide access to the main application features.
-
-### FR-03: Navigation
-
-Users must be able to navigate between the main sections using the navigation menu.
-
-### FR-04: Explore Pets
-
-Users must be able to view available pets from the local sample dataset.
-
-### FR-05: Search Pets
-
-Users must be able to enter a search term to find pets.
-
-### FR-06: Input Validation
-
-The system must:
-
-- Remove unnecessary spaces using `.strip()`
-- Convert text to lowercase using `.lower()`
-- Prevent empty search input
-- Handle invalid input without crashing
-
-### FR-07: Pet Details
-
-Users should be able to view basic information about a selected pet.
-
-### FR-08: Favorites
-
-Users should be able to select a pet as a favorite.
+| รหัสข้อกำหนด | ชื่อข้อกำหนด | รายละเอียด | สถานะ |
+|---|---|---|---|
+| **FR-01** | Application Start | แอปพลิเคชันสามารถเริ่มต้นทำงานได้สมบูรณ์ ไม่เกิดข้อผิดพลาดรุนแรง (Crash) | สำเร็จ |
+| **FR-02** | Home Dashboard | หน้าแรกแสดงข้อความต้อนรับ, Hero Banner และสัตว์เลี้ยงแนะนำ | สำเร็จ |
+| **FR-03** | Navigation | เมนูด้านข้างสามารถเปลี่ยนหน้าการทำงานได้อย่างถูกต้อง | สำเร็จ |
+| **FR-04** | Explore Pets | ผู้ใช้สามารถเรียกดูรายการสัตว์เลี้ยงทั้งหมดจากชุดข้อมูลจำลองได้ | สำเร็จ |
+| **FR-05** | Search Pets | ผู้ใช้สามารถค้นหาสัตว์เลี้ยงตามชื่อ สายพันธุ์ หรือคำอธิบายได้ | สำเร็จ |
+| **FR-06** | Input Validation | ทำความสะอาดข้อมูลนำเข้า (`.strip()`, `.lower()`) และบล็อกคำค้นหาที่เป็นค่าว่าง | สำเร็จ |
+| **FR-07** | Pet Details | แสดงรายละเอียดโปรไฟล์สัตว์เลี้ยงและข้อมูลการดูแลอย่างครบถ้วน | สำเร็จ |
+| **FR-08** | Favorites System | ผู้ใช้สามารถกดบันทึกและจัดการรายการสัตว์เลี้ยงที่สนใจได้ | สำเร็จ |
 
 ---
 
-## 6. Application Flow
+## 4. ผังการทำงานของแอปพลิเคชัน (Application Flow)
 
-User  
-↓  
-Home Dashboard  
-↓  
-Navigation  
-↓  
-Explore Pets  
-↓  
-Search / Browse Pets  
-↓  
-Select Pet  
-↓  
-View Pet Details  
-↓  
-Add to Favorites  
-↓  
-Favorites
+```text
+ผู้ใช้งานเข้าสู่ระบบ
+ │
+ ├──> หน้าหลัก (Home Dashboard) ──> สัตว์เลี้ยงแนะนำประจำวัน / เมนูลัด
+ │
+ ├──> ค้นหาสัตว์เลี้ยง (Explore Pets) ──> กรองข้อมูล ──> ดูรายละเอียด ──> บันทึกรายการโปรด / ยื่นคำขอรับเลี้ยง
+ │
+ ├──> แบบทดสอบค้นหาคู่หู (Pet Match Quiz) ──> ตอบคำถาม ──> แสดงผลสัตว์เลี้ยงที่เหมาะสม
+ │
+ ├──> คำนวณงบประมาณ (Care Budget Calculator) ──> ประเมินค่าใช้จ่ายแรกเลี้ยงและรายเดือน
+ │
+ └──> ระบบผู้ดูแล (Admin Dashboard) ──> ตรวจสอบและอนุมัติคำขอรับเลี้ยง
 
----
+## 5. สถาปัตยกรรมระบบ (Three-Layer Architecture)โปรเจกต์นี้ได้รับการออกแบบตามหลักวิศวกรรมซอฟต์แวร์ด้วย สถาปัตยกรรม 3 ชั้น (Three-Layer Architecture):Presentation Layer (app.py และ UI Components):จัดการหน้าจอผู้ใช้ (UI), การตกแต่งด้วย CSS (โทนสีม่วง), ฟอร์มรับข้อมูล และการแสดงผลโต้ตอบกับผู้ใช้Business Logic Layer (src/services/pet_service.py):ประมวลผลการค้นหา, อัลกอริทึมการกรองข้อมูล, ระบบคำนวณงบประมาณ และการประมวลผลคะแนนแบบทดสอบData Access Layer (src/storage/json_storage.py):จัดการอ่านและบันทึกข้อมูลเข้า-ออกจากไฟล์ JSON อย่างปลอดภัย (data/pets.json, data/applications.json)
 
-## 7. User Interface
+## 6. ทีมงานและบทบาทหน้าที่ (Team Roles & Responsibilities)ชื่อสมาชิกบทบาท (Role)หน้าที่ความรับผิดชอบหลักโดนัสPlanner / UI Designerวางแผน Sprint, รวบรวมข้อกำหนดระบบ, ออกแบบ UI/UX, เมนูนำทาง และจัดทำเอกสารโปรเจกต์ภีมDeveloper / Backendวางโครงสร้างแอปพลิเคชัน, จัดการชั้นข้อมูล (Data Layer), พัฒนาระบบค้นหา/กรองข้อมูล และระบบคำนวณหลังบ้านฟ่าFrontend / Debuggerพัฒนาหน้าจอการ์ดสัตว์เลี้ยง, ตรวจสอบและทดสอบระบบ (Testing), จัดการเคสผิดปกติ (Edge Cases) และแก้ไข Bug
 
-### 7.1 Home Page
+## 7. ตารางการทดสอบและประกันคุณภาพ (Testing & QA Matrix)เคสการทดสอบข้อมูลนำเข้า (Input)ผลลัพธ์ที่คาดหวังผลการทดสอบค้นหาปกติ"dog"แสดงรายการสัตว์เลี้ยงประเภทหมาผ่าน (PASS)อักษรตัวพิมพ์ใหญ่"DOG"ระบบไม่ถือสาตัวพิมพ์เล็ก-ใหญ่ แสดงผลถูกต้องผ่าน (PASS)อักษรผสมตัวพิมพ์"DoG"ระบบไม่ถือสาตัวพิมพ์เล็ก-ใหญ่ แสดงผลถูกต้องผ่าน (PASS)ข้อความมีช่องว่าง"  dog  "ตัดช่องว่างหน้า-หลังออกอัตโนมัติ และแสดงผลผ่าน (PASS)ค่าว่าง""แสดงการแจ้งเตือน และไม่ออกคำสั่งค้นหาผ่าน (PASS)เว้นวรรคอย่างเดียว"   "แสดงการแจ้งเตือน และไม่ออกคำสั่งค้นหาผ่าน (PASS)ค้นหาไม่พบข้อมูล"elephant"แสดงข้อความแจ้งเตือน "ไม่พบข้อมูลสัตว์เลี้ยง"ผ่าน (PASS)ไฟล์รูปภาพไม่สมบูรณ์รูปภาพหาไม่เจอแสดงรูปภาพสำรอง (Placeholder) ป้องกันเว็บล่มผ่าน (PASS)
 
-The Home page will contain:
+## 8. เกณฑ์ความสำเร็จ (Definition of Done - Sprint 1)[x] ซอร์สโค้ดถูกอัปโหลดขึ้น GitHub Repository เรียบร้อยแล้ว[x] โครงสร้างโฟลเดอร์เป็นระเบียบตามมาตรฐาน (src/, data/, assets/)[x] ไฟล์ requirements.txt กำหนดไลบรารีครบถ้วน (streamlit)[x] แอปพลิเคชันได้รับการ Deploy ขึ้น Streamlit Cloud และมีลิงก์สาธารณะพร้อมใช้งาน[x] การแสดงผลรองรับทั้งหน้าจอคอมพิวเตอร์และโทรศัพท์มือถือ[x] ข้อกำหนดทางฟังก์ชันทั้งหมด (FR-01 ถึง FR-08) ผ่านการทดสอบเรียบร้อย
 
-- Application name
-- Welcome message
-- Search bar
-- Browse by pet type
-- Featured pets
-- Navigation to Explore Pets
-
-### 7.2 Explore Pets
-
-The Explore Pets page will contain:
-
-- Search field
-- Pet type selection
-- Pet cards
-- Pet name
-- Breed
-- Age
-- Gender
-- Location
-- Details button
-
-### 7.3 Pet Details
-
-The Pet Details page will display:
-
-- Pet image
-- Pet name
-- Animal type
-- Breed
-- Age
-- Gender
-- Location
-- Description
-- Favorite button
-
-### 7.4 Favorites
-
-The Favorites page will display pets selected by the user.
-
----
-
-## 8. Sample Dataset
-
-Sprint 1 will use a local sample dataset instead of real API data.
-
-Each pet record should contain:
-
-- ID
-- Name
-- Type
-- Breed
-- Age
-- Gender
-- Location
-- Description
-- Image
-
----
-
-## 9. Input Validation
-
-Search input will be normalized before processing.
-
-Example:
-
-Example:
-
-```python
-search_text = search_text.strip().lower()
-```
-
-The system will check whether the input is empty.
-
-If the user does not enter a search term, the application will display an appropriate message instead of performing a search.
-
----
-
-## 10. Application Architecture
-
-The project will use a modular structure based on a three-layer architecture.
-
-### Presentation Layer
-
-Responsible for:
-
-- User Interface
-- Navigation
-- Forms
-- Displaying results
-
-### Business Logic Layer
-
-Responsible for:
-
-- Search processing
-- Input validation
-- Filtering logic
-- Favorites logic
-
-### Data Layer
-
-Responsible for:
-
-- Sample pet data
-- Future API integration
-- Data access
-## 11. Team Members & Roles
-
-| Member | Role | Main Responsibilities |
-|---|---|---|
-| โดนัส | Planner / UI Designer | Sprint planning, requirements, UI design, navigation, and documentation |
-| ภีม | Developer / Backend | Application structure, search, filtering, pet data, business logic, and API integration |
-| ฟ่า | Frontend / Debugger | User interface, pet cards, pet details, favorites, testing, debugging, and bug fixing |
-
-### โดนัส — Planner / UI Designer
-
-- Define Sprint goals and scope
-- Define functional requirements
-- Design the application layout
-- Design navigation and user flow
-- Prepare project documentation
-- Coordinate team tasks
-
-### ภีม — Developer / Backend
-
-- Develop the application structure
-- Prepare sample pet data
-- Implement search functionality
-- Implement filtering logic
-- Develop business logic
-- Prepare API integration for future sprints
-
-### ฟ่า — Frontend / Debugger
-
-- Develop the user interface
-- Create pet cards
-- Create Pet Details page
-- Create Favorites interface
-- Test application features
-- Debug application errors
-- Test invalid inputs and edge cases
-- Find and fix bugs
-12. Development Tasks
-1. Create GitHub repository
-2. Create project structure
-3. Prepare Sprint 1 documentation
-4. Create Home page
-5. Create navigation
-6. Create Explore Pets page
-7. Create sample pet dataset
-8. Create pet cards
-9. Implement search
-10. Implement input validation
-11. Create Pet Details
-12. Create Favorites interface
-13. Test application
-14. Fix errors
-15. Review Sprint 1 requirements
-13. Testing Plan
-Test Case	Input	Expected Result
-Normal search	dog	Dog results are displayed
-Uppercase	DOG	Search works correctly
-Mixed case	DoG	Search works correctly
-Spaces	dog	Spaces are removed
-Empty input	""	Validation message is displayed
-Spaces only	"   "	Validation message is displayed
-No result	elephant	No-result message is displayed
-
-
-14. Definition of Done
-Sprint 1 will be considered complete when:
-- GitHub repository is available
-- Sprint 1 documentation is completed
-- Application can start successfully
-- Home page is available
-- Navigation works
-- Explore Pets page is available
-- Sample pet data is available
-- Search works
-- Input validation works
-- Pet cards are displayed
-- Basic pet details can be viewed
-- Favorites interface is available
-- Application does not crash during normal use
-- Project structure is ready for Sprint 2
-15. Expected Sprint 1 Result
-At the end of Sprint 1, the project should have a functional Web Application foundation.
-Users should be able to open the application, navigate between the main sections, browse sample pets, search for pets, view basic pet information, and use the favorites interface.
-The application structure should be ready for Petfinder API integration and additional features in later sprints.
-16. Future Development
-Sprint 2
-- Petfinder API integration
-- Real pet data
-- Advanced search
-- Filtering
-- Pet details
-- Improved favorites
-- Error and loading states
-Sprint 3
-- Advanced UI/UX
-- Persistent favorites
-- Advanced filtering
-- Testing
-- Performance improvements
-- Deployment preparation
-Final Application
-- Complete Web Application
-- Petfinder API
-- Search and filtering
-- Pet details
-- Favorites
-- Responsive UI
-- Deployment
+## 9. แผนการพัฒนาในอนาคต (Future Roadmap)Sprint 2 (ระยะถัดไป)เชื่อมต่อกับ Petfinder API เพื่อดึงข้อมูลสัตว์เลี้ยงจริงแบบเรียลไทม์เพิ่มระบบกรองข้อมูลระดับสูง (กรองตามสายพันธุ์, ช่วงอายุ, ขนาดตัว, และสถานที่)เพิ่มระบบแจ้งเตือนขณะโหลดข้อมูลและระบบจัดการข้อผิดพลาดจากการเชื่อมต่อเครือข่ายSprint 3 และระยะสุดท้ายระบบบันทึกรายการโปรดแบบถาวรด้วยการเชื่อมต่อฐานข้อมูลปรับแต่งดีไซน์ UI/UX ให้สวยงามยิ่งขึ้น เพิ่มประสิทธิภาพความเร็วในการโหลดจัดทำเอกสารฉบับสมบูรณ์และเตรียมความพร้อมสำหรับการนำเสนอผลงาน
