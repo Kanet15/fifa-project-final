@@ -1,0 +1,41 @@
+[
+  {
+    "app_id": "APP001",
+    "pet_id": "P001",
+    "applicant_name": "สมชาย ใจดี",
+    "phone": "081-234-5678",
+    "line_id": "somchai_j",
+    "email": "somchai@example.com",
+    "space_type": "บ้านเดี่ยว",
+    "experience": "เคยเลี้ยงสุนัข",
+    "note": "มีสวนกว้างพร้อมรั้วรอบขอบชิดครับ",
+    "status": "Pending",
+    "submitted_at": "2026-10-01 10:30"
+  },
+  {
+    "app_id": "APP002",
+    "pet_id": "P005",
+    "applicant_name": "วิภาดา สุขสรรค์",
+    "phone": "089-876-5432",
+    "line_id": "wipada_v",
+    "email": "wipada@example.com",
+    "space_type": "คอนโด",
+    "experience": "มือใหม่",
+    "note": "คอนโดเลี้ยงสัตว์ได้ มีเวลาดูแลช่วงเย็นค่ะ",
+    "status": "Approved",
+    "submitted_at": "2026-10-02 14:15"
+  },
+  {
+    "app_id": "APP003",
+    "pet_id": "P012",
+    "applicant_name": "กิตติพงษ์ ลุยสวน",
+    "phone": "084-999-8877",
+    "line_id": "kitti_p",
+    "email": "kitti@example.com",
+    "space_type": "คอนโด",
+    "experience": "ไม่เคยเลี้ยงนก",
+    "note": "อยากเลี้ยงบนคอนโดครับ",
+    "status": "Rejected",
+    "submitted_at": "2026-10-03 08:20"
+  }
+]
